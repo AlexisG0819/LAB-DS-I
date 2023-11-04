@@ -47,7 +47,7 @@ public class ServletPrincipal extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
@@ -69,23 +69,20 @@ public void mostrarEmpleados(HttpServletRequest request, HttpServletResponse res
 
             try(Connection conn = DriverManager.getConnection(url)){
                 request.setAttribute("mensaje_conexion", "Ok!");
-                String sqlQuery = "select * from Empleados";
+                String sqlQuery = "select * from Aviones";
                 PreparedStatement pstmt = conn.prepareStatement(sqlQuery);
                 ResultSet rs = pstmt.executeQuery();
-                ArrayList<ViewModelEmpleado> listaEmpleados = new ArrayList<>();
+                ArrayList<ViewModelEmpleado> listaAviones = new ArrayList<>();
                 while (rs.next()) {
-                    ViewModelEmpleado empleado = new ViewModelEmpleado();
-                    empleado.setID_Empleado(rs.getInt("ID_Empleado"));
-                    empleado.setDUI_Empleado(rs.getString("DUI_Empleado"));
-                    empleado.setIsss_Empleado(rs.getInt("ISSS_Empleado"));
-                    empleado.setNombres(rs.getString("nombresEmpleado"));
-                    empleado.setApellido(rs.getString("apellidosEmpleado"));
-                    empleado.setFechaNac(rs.getDate("fechaNacEmpleado"));
-                    empleado.setTelefono(rs.getString("Telefono"));
-                    empleado.setCorreo(rs.getString("correo"));
-                    listaEmpleados.add(empleado);
+                    ViewModelEmpleado aviones = new ViewModelEmpleado();
+                    aviones.setID_Aviones(rs.getInt("ID_Aviones"));
+                    aviones.setModelo(rs.getString("modelo"));
+                    aviones.setCapacidad(rs.getInt("capacidad"));
+                    aviones.setTipo(rs.getString("tipo"));
+                    
+                    listaAviones.add(aviones);
                 }               
-                request.setAttribute("listaEmpleados", listaEmpleados);
+                request.setAttribute("listaAviones", listaAviones);
 
             }
         } catch (SQLException | ClassNotFoundException ex) {

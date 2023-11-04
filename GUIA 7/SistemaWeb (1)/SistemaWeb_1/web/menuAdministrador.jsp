@@ -14,9 +14,9 @@
     <body>
         <nav>
             <ul>
-                <li><a href="/SistemaWeb">Inicio de Aerolinea</a></li>
-                <li><a href="/SistemaWeb?accion=Login">Login</a></li>
-                <li><a href="/SistemaWeb?accion=GestionarEmpleados">GestionarEmpleados</a></li>
+                <li><a href="/SistemaWeb_1">Inicio de Aerolinea</a></li>
+                <li><a href="/SistemaWeb_1?accion=Login">Login</a></li>
+                <li><a href="/SistemaWeb_1?accion=GestionarEmpleados">GestionarAviones</a></li>
             </ul>
         </nav>
     </body>

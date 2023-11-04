@@ -13,15 +13,66 @@
 <html>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Login Sistema Escolar</title>
+    <title>Login Sistema Aerolinea</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: chartreuse;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h2 {
+            color: black;
+        }
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: red;
+            padding: 45px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
 
     <body>
-        <form method="POST" action="/SistemaWeb/ServletPrincipal?accion=Login" id="formLogin">
+        <form method="POST" action="/SistemaWeb_1/ServletPrincipal?accion=Login" id="formLogin">
             <div id="resultLogin"></div>    
-            <div><h1>Sistema Escolar 1.0</h1></div>           
+            <div><h1>Sistema de Aerolinea</h1></div>     
+            
             <%-- Crear objeto de la clase Date y formatear la fecha --%>
             <c:set var="fechaActual" value="<%= new java.util.Date() %>" />
-            <c:set var="formatoFecha" value="dd/MM/YYYY" />         
+            <c:set var="formatoFecha" value="dd/MM/YYYY" /> 
+            
             <%-- Imprimir fecha --%>            
             <div><label><strong>
                 <c:out value="Fecha actual: "/>

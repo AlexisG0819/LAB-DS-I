@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Models;
-
 import java.util.Date;
 
 /**
@@ -11,133 +10,69 @@ import java.util.Date;
  * @author Alexis
  */
 public class ViewModelEmpleado {
-    
-    //ATRIBUTOS
-    private int ID_Empleado;
-    private String DUI_Empleado;
-    private int Isss_Empleado;
-    private String nombres;
-    private String apellido;
-    private Date fechaNac;
-    private String telefono;
-    private String correo;
-    
-    
-    //Setter y Getters
 
-
-
+     //ATRIBUTOS
+    private int ID_Aviones;
+    private String modelo;
+    private int capacidad;
+    private String Tipo;
     /**
-     * @return the ID_Empleado
+     * @return the ID_Aviones
      */
-    public int getID_Empleado() {
-        return ID_Empleado;
+    public int getID_Aviones() {
+        return ID_Aviones;
     }
 
     /**
-     * @param ID_Empleado the ID_Empleado to set
+     * @param ID_Aviones the ID_Aviones to set
      */
-    public void setID_Empleado(int ID_Empleado) {
-        this.ID_Empleado = ID_Empleado;
+    public void setID_Aviones(int ID_Aviones) {
+        this.ID_Aviones = ID_Aviones;
     }
 
     /**
-     * @return the DUI_Empleado
+     * @return the modelo
      */
-    public String getDUI_Empleado() {
-        return DUI_Empleado;
+    public String getModelo() {
+        return modelo;
     }
 
     /**
-     * @param DUI_Empleado the DUI_Empleado to set
+     * @param modelo the modelo to set
      */
-    public void setDUI_Empleado(String DUI_Empleado) {
-        this.DUI_Empleado = DUI_Empleado;
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
 
     /**
-     * @return the Isss_Empleado
+     * @return the capacidad
      */
-    public int getIsss_Empleado() {
-        return Isss_Empleado;
+    public int getCapacidad() {
+        return capacidad;
     }
 
     /**
-     * @param Isss_Empleado the Isss_Empleado to set
+     * @param capacidad the capacidad to set
      */
-    public void setIsss_Empleado(int Isss_Empleado) {
-        this.Isss_Empleado = Isss_Empleado;
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
     }
 
     /**
-     * @return the nombres
+     * @return the Tipo
      */
-    public String getNombres() {
-        return nombres;
+    public String getTipo() {
+        return Tipo;
     }
 
     /**
-     * @param nombres the nombres to set
+     * @param Tipo the Tipo to set
      */
-    public void setNombres(String nombres) {
-        this.nombres = nombres;
+    public void setTipo(String Tipo) {
+        this.Tipo = Tipo;
     }
 
-    /**
-     * @return the apellido
-     */
-    public String getApellido() {
-        return apellido;
-    }
-
-    /**
-     * @param apellido the apellido to set
-     */
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    /**
-     * @return the fechaNac
-     */
-    public Date getFechaNac() {
-        return fechaNac;
-    }
-
-    /**
-     * @param fechaNac the fechaNac to set
-     */
-    public void setFechaNac(Date fechaNac) {
-        this.fechaNac = fechaNac;
-    }
-
-    /**
-     * @return the telefono
-     */
-    public String getTelefono() {
-        return telefono;
-    }
-
-    /**
-     * @param telefono the telefono to set
-     */
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
-    /**
-     * @return the correo
-     */
-    public String getCorreo() {
-        return correo;
-    }
-
-    /**
-     * @param correo the correo to set
-     */
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-        
+     
+   
     
 }
